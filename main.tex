@@ -149,10 +149,27 @@ En una aplicación KLT pura, todo el trabajo de gestión de hilos lo realiza el 
 \section{EJEMPLO DE APLICACIÓN}
 \\
 \\
-
-
-
+A continuación se muestra un ejemplo de la implementación de hilos realizado a través del lenguaje C++ en Qt Creator.
 \\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.48\textwidth]{1.png}
+\caption{\label{fig1} Código de C++ en Qt.}
+\end{figure}
+\\
+En este ejemplo se implementa un "Hilo 2"  haciendo uso de la clase thread.
+\\
+La clase thread, tras ser construida, generará un thread, sin necesidad de llamar a ningún método suyo.
+\\
+En el main se crea el hilo 2 e implementa un hilo 1 principal para evidenciar los resultados del comportamiento de ambos al momento de correr el programa.
+\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.48\textwidth]{2.png}
+\caption{\label{fig1} Resultados.}
+\end{figure}
+\\
+En los resultados se evidencia que el programa está ejcutando los dos hilos "simultáneamente", ejecuta una parte del hilo 1, luego una parte del hilo 2, vuelve al hilo 1 y por último regresa al hilo 2.
 \\
 \section{ANÁLISIS}
 \\
@@ -161,7 +178,7 @@ En una aplicación KLT pura, todo el trabajo de gestión de hilos lo realiza el 
 \\
 • Es más rápido cambiar de un hilo a otro dentro del mismo proceso, que cambiar de un proceso a otro.
 \\
-• 
+• El manejo de hilos está ligado al Hardware del equipo, según sus características se facilita la realización de diferentes procesos al mismo tiempo.
 \\
 • El sistema operativo solo reconoce un hilo de ejecución en el proceso.
 \\
@@ -179,11 +196,6 @@ En una aplicación KLT pura, todo el trabajo de gestión de hilos lo realiza el 
 
 \bibitem{b5}  Sistemas operativos-Recursos teóricos. (2014). fing.edu. Fecha de consulta: 21:30, julio 17, 2020 
 
-\bibitem{b6} 
-
-\bibitem{b7} 
-
-\bibitem{b8}  
 
 
 \end{thebibliography}
